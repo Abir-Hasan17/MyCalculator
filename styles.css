@@ -1,0 +1,119 @@
+button{
+    border: none;
+    /* outline: none; */
+    border-radius: 12px;
+    font-size: 1.5rem;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: white;
+}
+
+button:active{
+    transform: scale(.95);
+}
+
+.number{
+    background-color: rgb(91, 91, 91);
+}
+
+.number:hover{
+    background-color: rgb(135, 133, 133);
+}
+
+.operation{
+    background-color: rgb(255, 171, 16);
+}
+
+.operation:hover{
+    background-color: rgb(255, 149, 0);
+}
+
+.zero{
+    grid-column: span 2;
+    text-align: left;
+    padding-left: 24px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 16px;
+}
+
+.display{
+    background-color: rgb(22, 47, 25);
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 24px 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin: 4px;
+}
+
+.prev_operand{
+    color: aliceblue;
+    margin-bottom: 4px;
+    font-size: 1.5rem;
+    min-height: 1.5rem;
+}
+
+.curr_operand{
+    color: white;
+    font-size: 2.5rem;
+    min-height: 2.5rem;
+}
+
+.calculator{
+    width: 320px;
+    background-color: rgb(37, 47, 55);
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 12px 2px;
+    border-radius: 12px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 36px;
+}
+
+.blured_bg {
+    padding: 0px;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .blured_bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('calcculator_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); 
+    z-index: -1;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow: hidden; 
+  }
+  
